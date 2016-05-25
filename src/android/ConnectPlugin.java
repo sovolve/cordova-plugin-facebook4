@@ -764,6 +764,8 @@ public class ConnectPlugin extends CordovaPlugin {
             builder.setContentDescription(paramBundle.get("description"));
         if (paramBundle.containsKey("href"))
             builder.setContentUrl(Uri.parse(paramBundle.get("href")));
+        if (paramBundle.containsKey("link"))
+            builder.setContentUrl(Uri.parse(paramBundle.get("link")));
         if (paramBundle.containsKey("picture"))
             builder.setImageUrl(Uri.parse(paramBundle.get("picture")));
         return builder.build();
